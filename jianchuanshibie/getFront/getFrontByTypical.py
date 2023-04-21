@@ -1,7 +1,7 @@
 import cv2
 import matplotlib.pyplot as plt
 
-print 'Load Image'
+print('Load Image')
 
 imgFile = 'testSet/0009.jpg'
 
@@ -10,7 +10,7 @@ img = cv2.imread(imgFile)
 cRange = 256
 
 rows,cols,channels = img.shape
-print 'rows,cols,channels:',rows,cols,channels
+print('rows,cols,channels:',rows,cols,channels)
 
 img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -37,4 +37,4 @@ plt.subplot(2,3,4), plt.imshow(imgOtsu), plt.title('Otsu'), plt.xticks([]), plt.
 plt.subplot(2,3,5), plt.imshow(imgAdapt), plt.title('Adaptive Gaussian Threshold'), plt.xticks([]), plt.yticks([])
 plt.show()
 
-print 'Goodbye!'
+print('Goodbye!')
