@@ -56,7 +56,8 @@ ret, binary = cv2.threshold(closed, 250, 255, cv2.THRESH_BINARY)
 cv2.imshow('Binary', binary)
 
 # 找到轮廓
-_, contours, hierarchy = cv2.findContours(binary, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+# _, contours, hierarchy = cv2.findContours(binary, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+contours, hierarchy = cv2.findContours(binary, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 # 绘制轮廓
 img_contours = img_o.copy()
 cv2.drawContours(img_contours, contours, -1, (0, 0, 255), 3)
